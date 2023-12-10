@@ -1,10 +1,20 @@
 function Person(firstName, lastName) {
     this.firstName = firstName;
     this.lastName = lastName;
-    this.log = function () {
-        console.log('I am a person', this.firstName, this.lastName);
-    };
 }
+
+Person.prototype.log = function () {
+    console.log('I am a person', this.firstName, this.lastName);
+};
+
+
+String.prototype.reverse = function() {
+    var parts = this.split('');
+    var reversed = parts.reverse();
+    var result = reversed.join('');
+    return result;
+}
+
 
 var p1 = new Person('John', 'Smith');
 var p2 = new Person('Jane', 'Smith');
