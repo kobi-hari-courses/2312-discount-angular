@@ -1,0 +1,41 @@
+<div *ngIf="gameState === 'Win'" class="win">
+    <h1>You win</h1>
+    <h2>The seret was {{secret}}</h2>
+    <h2>You guessed it in {{guesses.length}} guesses</h2>
+</div>
+
+<div *ngIf="gameState === 'Lose'" class="lose">
+    <h1>You Lost, sorry</h1>
+    <h2>The secret was {{secret}}</h2>
+</div>
+
+<div *ngIf="gameState === 'Init'" class="init">
+    <h1>Press here to start a new game</h1>
+</div>
+
+<button 
+    (click)="startGame()"
+    *ngIf="gameState !== 'In Progress'">Start Game</button>
+
+<div *ngIf="gameState === 'In Progress'">
+    <div class="next-guess-area">
+        <input type="number" #nextGuessBox>
+        <button (click)="
+            submitGuess(nextGuessBox.valueAsNumber);
+            nextGuessBox.value = '';
+            nextGuessBox.focus()
+        ">Yalla</button>
+    </div>
+    <div class="guesses-list">
+        <div *ngFor="let guess of guesses; let i = index"
+            [class.too-high]="guess.state === 'Too High'"
+            [class.too-low]="guess.state === 'Too Low'"
+            [class.exact]="guess.state === 'Exact'"
+        >
+            {{i + 1}} {{guess.value}} {{guess.state}}
+        </div>
+    </div>
+</div>
+
+
+
