@@ -1,3 +1,9 @@
+# Module 02 - Typescript
+### Projects:
+|     |     |
+| --- | --- |
+| [fun-with-ts](./projects/fun-with-ts) | Introduction to Typescript | 
+
 ## Typescript basics
 * We learned about the basic types of typescript
   * The 6 atomic types of javascript: `boolean`, `number`, `string`, `object`, `function` and `undefined`
@@ -19,7 +25,7 @@
 * Cross Types
 * Mapped types
 
-
+## Working Environment
 * We saw how to create the `tsconfig.json` file and configure different aspects of the typescript project
   * What the target version of javascript is
   * Where to locate the source files
