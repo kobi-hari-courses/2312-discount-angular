@@ -25,17 +25,8 @@
 * We saw how to use the node.js `require` command in order to incorporate another module (file) into our code
 * We saw how the `package.json` file manages the project as a package.
 * We saw how to install external packages using `npm install` and the `package.json > dependencies` section
-
-## Typescript basics
-* We learned about the basic types of typescript
-  * The 6 atomic types of javascript: `boolean`, `number`, `string`, `object`, `function` and `undefined`
-
-## Typescript deep dive
-* Using the `let` keyword
-* Defining Classes
-* Declaring constructors and initializing fields in the constructor signature
-* private, public and protected fields
-* the `type` alias
+* We talked about the diffrence between `dependencies` and `devDependencies` 
+* We saw how to install the typescript compiler into the package
 
 
 
