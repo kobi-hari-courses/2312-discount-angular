@@ -3,4 +3,4 @@
 # Daily summaries
 - [Module 01 - Javascript and NodeJS](./module%2001/README.md)
 - [Module 02 - Typescript](./module%2002/README.md)
-- [Module 03 - Hello Angular]
+- [Module 03 - Hello Angular](./module%2003/README.md)
