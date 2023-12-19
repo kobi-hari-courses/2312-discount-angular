@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { TitleComponent } from './components/title/title.component';
+import { StringSelectorComponent } from "./components/string-selector/string-selector.component";
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [CommonModule, RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+    selector: 'app-root',
+    standalone: true,
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.css',
+    imports: [CommonModule, TitleComponent, StringSelectorComponent]
 })
 export class AppComponent {
   colors: string[] = ['red', 'green', 'blue', 'brown', 'black', 'purple'];
@@ -27,5 +28,13 @@ export class AppComponent {
   }
   selectSize(value: string) {
     this.selectedSize = value;
+  }
+
+  onSpecialTitleEvent(times: number) {
+    if (times === 3) {
+      this.selectedColor = 'purple';
+    } else {
+      this.selectedColor = 'blue';
+    }
   }
 }

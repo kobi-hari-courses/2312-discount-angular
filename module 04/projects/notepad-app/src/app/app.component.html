@@ -1,23 +1,25 @@
+<div class="title-area">
+  <app-title 
+    (tripleClicked)="onSpecialTitleEvent($event)"
+    [color]="selectedColor" caption="Notepad +++"></app-title>
+</div>
 <div class="colors-area">
-  <div class="option" 
-    *ngFor="let item of colors"
-    [class.chosen]="item === selectedColor"
-    (click)="selectColor(item)"
-    >{{item}}</div>
+  <app-string-selector [options]="colors"
+    [selectedOption]="selectedColor"
+    (selection)="selectColor($event)"
+  />
 </div>
 <div class="fonts-area">
-  <div class="option" 
-  *ngFor="let item of fonts"
-  [class.chosen]="item === selectedFont"
-  (click)="selectFont(item)"
->{{item}}</div>
+  <app-string-selector [options]="fonts"
+    [selectedOption]="selectedFont"
+    (selection)="selectFont($event)"
+  />
 </div>
 <div class="sizes-area">
-  <div class="option" 
-    *ngFor="let item of sizes"
-    [class.chosen]="item === selectedSize"
-    (click)="selectSize(item)"
-    >{{item}}</div>
+  <app-string-selector [options]="sizes"
+    [selectedOption]="selectedSize"
+    (selection)="selectSize($event)"
+  />
 </div>
 <div class="document-area">
   <textarea

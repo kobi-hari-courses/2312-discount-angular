@@ -1,0 +1,22 @@
+div {
+    border: 1px solid lightgray; 
+    margin: 5px;
+    border-radius: 5px;
+}
+
+div.option {
+    padding-inline-start: 10px;
+    padding-top:2px ;
+    padding-bottom: 2px;
+    background-color: rgba(211, 211, 211, 0.25);
+    cursor: pointer;
+    user-select: none;
+    transition: 0.3s;
+}
+div.option:hover {
+    background-color: rgba(211, 211, 211, 0.6);
+    transform: scale(1.05);
+}
+div.option.chosen {
+    background-color: lightgreen;
+}
