@@ -1,0 +1,1 @@
+export type GameState = 'Init' | 'In Progress' | 'Win' | 'Lost';
