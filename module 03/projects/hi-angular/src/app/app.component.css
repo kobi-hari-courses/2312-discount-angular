@@ -1,0 +1,8 @@
+.tools {
+    display: flex;
+    flex-direction: row;
+}
+
+img {
+    max-height: 30px;
+}

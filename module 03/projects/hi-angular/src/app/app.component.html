@@ -1,3 +1,16 @@
-<h1>Hello World</h1>
+<div class="tools">
+  <input
+    #searchy
+    type="search"
+    [disabled]="isBusy"
+    (input)="setKeyword(searchy.value)"
+  />
+  <button (click)="search()" [disabled]="isBusy">Go</button>
+  <img *ngIf="isBusy" src="assets/spinner.gif" />
+</div>
 
-the title is {{title}}
+<ul>
+  <li *ngFor="let result of results">
+    {{ result }}
+  </li>
+</ul>
