@@ -2,7 +2,7 @@
 ### Projects:
 |     |     |
 | --- | --- |
-| [Hello Angular](./projects/hello-angular/) | Bare bones angular application |
+| [Hi Angular](./projects/hi-angular/) | Bare bones angular application |
 
 
 ### Angular from way above

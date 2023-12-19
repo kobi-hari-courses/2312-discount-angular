@@ -4,3 +4,13 @@
 - [Module 01 - Javascript and NodeJS](./module%2001/README.md)
 - [Module 02 - Typescript](./module%2002/README.md)
 - [Module 03 - Hello Angular](./module%2003/README.md)
+- [Module 04 - Angular Components](./module%2004/README.md)
+
+# Exercises
+- [Exercise 01 - Typescript](./module%2002/exercises/README.md)
+- [Exercise 02 - Basic Angular](./module%2004/exercises/README.md)
+
+# Extra Material 
+- [CSS Flex Game](https://flexboxfroggy.com/)
+- [CSS Grid Game](https://cssgridgarden.com/)
+- [CSS Selectors Game](https://flukeout.github.io/)

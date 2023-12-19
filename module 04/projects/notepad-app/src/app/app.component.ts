@@ -10,18 +10,5 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'hello-angular';
-  
-
-  counter = 0;
-
-  inc() {
-    this.counter++;
-  }
-
-  constructor() {
-    setTimeout(() => {
-      this.title = 'Look at me, I have changed'
-    }, 5000);
-  }
+  title = 'notepad-app';
 }
