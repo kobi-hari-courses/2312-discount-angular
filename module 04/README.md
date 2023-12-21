@@ -2,7 +2,8 @@
 ### Projects:
 |     |     |
 | --- | --- |
-| [Notepad App](./projects/notepad-app/) | Intermidate Angular application using components, inputs, outputs and lifecycle hooks |
+| [Notepad App](./projects/notepad-app/) | Intermidate Angular application using components, inputs, outputs |
+| [Lifecycle Hooks](./projects/fun-with-hooks/) | Example of `OnInit`, `OnChanges` and `OnDestroy` |
 
 
 ### Before we start - Introduction to Grid Layout
