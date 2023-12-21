@@ -18,3 +18,9 @@
 .toolbar>select {
     transform: translateY(-6px);
 }
+
+.dishes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}

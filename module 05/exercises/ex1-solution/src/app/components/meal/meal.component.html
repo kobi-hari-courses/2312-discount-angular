@@ -5,9 +5,11 @@
     </select>
     <button (click)="onAdd(selectBox.value)">+</button>
 </div>
+
 <div class="price">
     Total: {{meal.price | currency}}
 </div>
+
 <div class="dishes">
     <app-dish *ngFor="let dish of meal.dishes" [dish]="dish"/>
 </div>

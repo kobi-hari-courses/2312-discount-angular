@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 import { Dish } from "../models/dish.model";
 
-@Injectable()
+@Injectable({providedIn: 'root'})
 export class MealService {
     private _dishes: Dish[] = [];
     private _price = 0;

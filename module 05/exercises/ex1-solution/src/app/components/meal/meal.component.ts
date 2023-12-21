@@ -1,8 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { MealService } from '../../services/meal.service';
 import { MenuService } from '../../services/menu.service';
 import { CommonModule } from '@angular/common';
-import { Dish } from '../../models/dish.model';
 import { DishComponent } from '../dish/dish.component';
 
 @Component({
@@ -11,10 +10,13 @@ import { DishComponent } from '../dish/dish.component';
   imports: [CommonModule, DishComponent],
   templateUrl: './meal.component.html',
   styleUrl: './meal.component.css',
-  providers: [MealService],
+  providers: [MealService]
 })
 export class MealComponent {
-  constructor(public meal: MealService, public menu: MenuService) {}
+  constructor() {}
+
+  public meal = inject(MealService);
+  public menu = inject(MenuService);
 
   titles = this.menu.getAllDishTitles();
 

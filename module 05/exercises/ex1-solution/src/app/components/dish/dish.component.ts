@@ -12,5 +12,4 @@ import { CommonModule } from '@angular/common';
 export class DishComponent {
   @Input({required: true})
   dish!: Dish;
-
 }
