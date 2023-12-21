@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { AdditionService } from '../../services/addition.service';
 import { AddingService } from '../../services/adding-service.interface';
+import { URL_TOKEN } from '../../tokens/url.token';
 
 @Component({
   selector: 'app-calc',
@@ -14,7 +15,12 @@ import { AddingService } from '../../services/adding-service.interface';
 
 })
 export class CalcComponent {
-  constructor(protected additionService: AdditionService){}
+  constructor(
+      protected additionService: AdditionService, 
+      @Inject(URL_TOKEN) private url: string){
+
+        console.log('CalcComponent received the url', url);
+      }
 
   result: number = 0;
 
