@@ -1,0 +1,10 @@
+<div class="card" (click)="flip.emit()" [class.flipped]="flipped">
+    <ng-container *ngIf="card !== null">
+        <div class="face front">
+            <img [src]="imagePath">
+        </div>
+        <div class="face back">
+            <img [src]="backPath">            
+        </div> 
+    </ng-container>
+</div>

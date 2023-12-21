@@ -8,7 +8,8 @@
 
 # Exercises
 - [Exercise 01 - Typescript](./module%2002/exercises/README.md)
-- [Exercise 02 - Basic Angular](./module%2004/exercises/README.md)
+- [Exercise 02 - Basic Angular](./module%2003/exercises/README.md)
+- [Exercise 03 - Angular Components](./module%2004/exercises/README.md)
 
 # Extra Material 
 - [CSS Flex Game](https://flexboxfroggy.com/)

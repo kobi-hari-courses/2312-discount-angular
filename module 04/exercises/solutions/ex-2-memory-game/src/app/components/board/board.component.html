@@ -1,0 +1,8 @@
+<div class="cells">
+    <div *ngFor="let card of cells" class="cell">
+        <app-card [card]="card"
+            [flipped]="isFlipped(card)"
+            (flip)="onFlip(card!)"
+        ></app-card>
+    </div>
+</div>

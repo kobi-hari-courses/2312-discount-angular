@@ -1,0 +1,16 @@
+<div class="area player-1">
+    <app-player [player]="player1" [isActive]="currentPlayer === player1"></app-player>
+</div>
+<div class="area board" *ngIf="!isCompleted">
+    <app-board [cells]="cells"
+        (match)="onMatch($event)"
+        (miss)="onMiss()"
+    ></app-board>
+</div>
+<div class="area completed" *ngIf="isCompleted">
+    <h1>Game Over</h1>
+    <button (click)="newGame()">New Game</button>
+</div>
+<div class="area player-2">
+    <app-player [player]="player2" [isActive]="currentPlayer === player2"></app-player>
+</div>

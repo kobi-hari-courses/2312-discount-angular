@@ -4,6 +4,7 @@
 | --- | --- |
 | [Notepad App](./projects/notepad-app/) | Intermidate Angular application using components, inputs, outputs and lifecycle hooks |
 
+
 ### Before we start - Introduction to Grid Layout
 * We have seen the Grid layout, and how to use it to create modren responsive UI layout
 * We have seen how to declare grid lines using `grid-template-rows` and `grid-template-columns` on the container
@@ -27,9 +28,11 @@
 * We used the `@Output` Directive and the `EventMitter<T>` class to create our own events and raise them in our components
 * We used the `(event)="action()"` Syntax to respond to an event in the container component
 * We used the `$event` keyword to access event data
+
+### Angular Lifecycle hooks
 * We learned about the various lifecycle hooks of angular components:
   * The constructor itself
   * The `OnInit` interface (after the inputs have been initialized)
   * The `OnChanges` interface (after each time an input is updated)
   * The `OnDestroy` interface (right before the component is to be removed from the DOM and destroyed)
-
+* Using getters for calculated properties
