@@ -1,0 +1,14 @@
+:host {
+    display: grid;
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+}
+
+.root {
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
