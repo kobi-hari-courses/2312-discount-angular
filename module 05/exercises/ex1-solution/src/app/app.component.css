@@ -1,0 +1,20 @@
+:host {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.meal {
+    border: 1px solid gray;
+    border-radius: 10px;
+    margin: 4px;
+    padding: 4px;
+    overflow: hidden;
+}
+
+h1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: rgb(207, 242, 207);
+    margin: -4px;
+}

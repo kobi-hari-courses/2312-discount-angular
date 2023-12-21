@@ -1,0 +1,13 @@
+<div class="toolbar">
+    <select #selectBox>
+        <option *ngFor="let dish of titles" [value]="dish">{{dish}}
+        </option>
+    </select>
+    <button (click)="onAdd(selectBox.value)">+</button>
+</div>
+<div class="price">
+    Total: {{meal.price | currency}}
+</div>
+<div class="dishes">
+    <app-dish *ngFor="let dish of meal.dishes" [dish]="dish"/>
+</div>

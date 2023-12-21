@@ -1,0 +1,20 @@
+.toolbar {
+    margin-top: -10px;
+}
+
+.toolbar>button {
+    width: 28px;
+    height: 28px;
+    background-color: lightgreen;
+    color: white;
+    border: 0px transparent;
+    font-size: 20px;
+    margin-left: 5px;
+    padding: 4px;
+    line-height: 1;
+    border-radius: 50%;
+}
+
+.toolbar>select {
+    transform: translateY(-6px);
+}
