@@ -6,6 +6,8 @@
 - [Module 03 - Hello Angular](./module%2003/README.md)
 - [Module 04 - Angular Components](./module%2004/README.md)
 - [Module 05 - Dependency Injection](./module%2005/README.md)
+- [Module 06 - Introduction to RxJS](./module%2006/README.md)
+- [Module 07 - Reactive Services](./module%2007/README.md)
 
 # Exercises
 - [Exercise 01 - Typescript](./module%2002/exercises/README.md)
