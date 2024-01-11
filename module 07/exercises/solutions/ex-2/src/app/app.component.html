@@ -1,0 +1,15 @@
+<app-color-square [color]="(compColor$ | async)!"/>
+<app-color-square [color]="(userColor$ | async)!"/>
+
+<div>
+    <div>Red</div>
+    <app-color-comp-editor component="r"/>
+    <div>Green</div>
+    <app-color-comp-editor component="g"/>
+    <div>Blue</div>
+    <app-color-comp-editor component="b"/>
+
+    Distance: {{distance$ | async}}
+
+</div>
+
