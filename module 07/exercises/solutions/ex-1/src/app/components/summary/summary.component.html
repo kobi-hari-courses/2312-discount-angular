@@ -1,0 +1,16 @@
+<table>
+    <tbody>
+        <tr>
+            <td>Questions</td>
+            <td>{{questions$ | async}}</td>
+        </tr>
+        <tr>
+            <td>Correct</td>
+            <td>{{correct$ | async}}</td>
+        </tr>
+        <tr>
+            <td>Score</td>
+            <td>{{score$ | async | percent}}</td>
+        </tr>
+    </tbody>
+</table>
