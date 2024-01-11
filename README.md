@@ -14,9 +14,17 @@
 - [Exercise 02 - Basic Angular](./module%2003/exercises/README.md)
 - [Exercise 03 - Angular Components](./module%2004/exercises/README.md)
 - [Self Practice At Home](https://github.com/kobi2294/course-exercises/blob/main/README.md)
+- [Exercise 04 - RxJS and Services](./module%2007/exercises/README.md)
 
 
 # Extra Material 
 - [CSS Flex Game](https://flexboxfroggy.com/)
 - [CSS Grid Game](https://cssgridgarden.com/)
 - [CSS Selectors Game](https://flukeout.github.io/)
+- [Reactive X](https://reactivex.io/)
+- [RxJS](https://rxjs.dev/)
+- [Rx Viz](https://rxviz.com/)
+- [Observables Game](https://www.rxjs-fruits.com/subscribe)
+
+# Videos
+- [Introduction to Reactive X](https://youtu.be/Hlrty4kFdKo)
