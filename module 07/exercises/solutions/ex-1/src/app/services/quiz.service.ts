@@ -1,45 +1,69 @@
 import { Injectable } from '@angular/core';
 import { randomNumber } from './helpers';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, combineLatest, map } from 'rxjs';
+
+interface Record {
+  num1 : number;
+  num2: number;
+  answer: number | null;
+
+}
 
 @Injectable({
   providedIn: 'root'
 })
 export class QuizService {
-  private num1: number = randomNumber(5, 20);
-  private num2: number = randomNumber(5, 20);
+  private history: Record[] = [{
+    num1: randomNumber(5, 20), 
+    num2: randomNumber(5, 20), 
+    answer: null
+  }]; 
 
-  private questionsCount: number = 0;
-  private correctCount: number = 0;
-  private score: number = 0;
+  private history$ = new BehaviorSubject(this.history);
 
-  private num1$ = new BehaviorSubject(this.num1);
-  private num2$ = new BehaviorSubject(this.num2);
-  private questionsCount$ = new BehaviorSubject(this.questionsCount);
-  private correctCount$ = new BehaviorSubject(this.correctCount);
-  private score$ = new BehaviorSubject(this.score);
+  readonly num1$ = this.history$.pipe(
+    map(history => history[history.length -1].num1)
+  );
+
+  readonly num2$ = this.history$.pipe(
+    map(history => history[history.length -1].num2)
+  );
+  readonly questionsCount$ = this.history$.pipe(
+    map(history => history.length - 1)
+  )
+  readonly correctCount$ = this.history$.pipe(
+    map(history => history
+          .filter(rec => (rec.num1 * rec.num2) === rec.answer)
+          .length)
+  );
+  readonly score$ = combineLatest(
+    [this.correctCount$, this.questionsCount$],
+    (correct, questions) => correct / questions);
 
   constructor() { }
 
   submit(value: number) {
-    const isCorrect = (value === this.num1 * this.num2);
-    if (isCorrect) this.correctCount++;
-    this.questionsCount++;
-    this.score = this.correctCount / this.questionsCount;
-    this.num1 = randomNumber(5, 20);
-    this.num2 = randomNumber(5, 20);
+    const newHistory: Record[] = [];
+    for (let index = 0; index < this.history.length - 1; index++) {
+      newHistory.push(this.history[index]);
+    }
 
-    this.correctCount$.next(this.correctCount);
-    this.questionsCount$.next(this.questionsCount);
-    this.score$.next(this.score);
-    this.num1$.next(this.num1);
-    this.num2$.next(this.num2);
+    const last = this.history[this.history.length -1];
+    const modifiedLast: Record = {
+      ...last, 
+      answer: value
+    }
+
+    newHistory.push(modifiedLast);
+    newHistory.push({
+      num1: randomNumber(5, 20), 
+      num2: randomNumber(5, 20), 
+      answer: null
+    });
+
+    this.history = newHistory;
+    this.history$.next(this.history);
+
   }
-
-  getNum1() { return this.num1$.asObservable()}
-  getNum2() { return this.num2$.asObservable()}
-  getQuestionsCount() { return this.questionsCount$.asObservable()}
-  getCorrectCount() { return this.correctCount$.asObservable()}
-  getScore() { return this.score$.asObservable()}
 
 }

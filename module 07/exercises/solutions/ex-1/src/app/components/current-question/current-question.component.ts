@@ -11,8 +11,8 @@ import { CommonModule } from '@angular/common';
 })
 export class CurrentQuestionComponent {
   private readonly quizService = inject(QuizService);
-  num1$ = this.quizService.getNum1();
-  num2$ = this.quizService.getNum2();
+  num1$ = this.quizService.num1$
+  num2$ = this.quizService.num2$
 
   submit(value: number) {
     console.log('component submit', value);

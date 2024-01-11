@@ -12,8 +12,8 @@ import { CommonModule } from '@angular/common';
 export class SummaryComponent {
   private readonly quizService = inject(QuizService);
 
-  questions$ = this.quizService.getQuestionsCount();
-  correct$ = this.quizService.getCorrectCount();
-  score$ = this.quizService.getScore();
+  questions$ = this.quizService.questionsCount$;
+  correct$ = this.quizService.correctCount$;
+  score$ = this.quizService.score$;
 
 }
