@@ -8,6 +8,7 @@
 - [Module 05 - Dependency Injection](./module%2005/README.md)
 - [Module 06 - Introduction to RxJS](./module%2006/README.md)
 - [Module 07 - Reactive Services](./module%2007/README.md)
+- [Module 08 - Angular Routing](./module%2008/README.md)
 
 # Exercises
 - [Exercise 01 - Typescript](./module%2002/exercises/README.md)
