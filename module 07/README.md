@@ -12,3 +12,22 @@
 * We saw how to configure manual change detection for components and understood that it can dramatically improve performance
 * We saw how to inject the `ChangeDetectorRef` and to manually activate `detectChanges` to force invalidation of the DOM
 
+### Introduction to `RxJS` operators
+* We talked about the concept of operators in math, strings and arrays
+* We understood that RxJS operators create observables. 
+* We saw 4 documentation web sites that serve as reference guide for reactive operators
+    * [ReactiveX docs](http://reactivex.io/)
+    * [RxJS docs](https://rxjs-dev.firebaseapp.com/)
+    * [Rx Marbles](https://rxmarbles.com/)
+    * [Rx Marble Visualizer](https://rxviz.com/)
+* We covered some simple operators
+    * [map](https://rxjs-dev.firebaseapp.com/api/operators/map)
+    * [from](https://rxjs-dev.firebaseapp.com/api/index/function/from)
+    * [filter](https://rxjs-dev.firebaseapp.com/api/operators/filter)
+    * [take](https://rxjs-dev.firebaseapp.com/api/operators/take)
+* We created an example that uses observable to convert color search keyword into a list of matching results (colors)
+* We used the `map` operator to convert user input to results
+
+### Combinators
+* We saw some combinators we can use to combine several observables together into one
+    - `combineLatest`
