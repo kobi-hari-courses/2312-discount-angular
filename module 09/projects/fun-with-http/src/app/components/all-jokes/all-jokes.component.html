@@ -1,0 +1,13 @@
+@if(jokes$ | async; as jokes) {
+    @for(joke of jokes; track joke.id) {
+        <div class="joke">
+            @if(joke.question) {
+                <h1>{{joke.question}}</h1>
+                <h2>{{joke.answer}}</h2>        
+            } @else {
+                <h3>{{joke.text}}</h3>
+            }
+        </div>
+    }
+}
+
