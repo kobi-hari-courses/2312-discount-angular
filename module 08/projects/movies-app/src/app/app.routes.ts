@@ -1,14 +1,15 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
-import { MoviesListComponent } from './components/movies-list/movies-list.component';
-import { AccountComponent } from './components/account/account.component';
 import { MovieDetailsComponent } from './components/movie-details/movie-details.component';
+import { MovieEditComponent } from './components/movie-edit/movie-edit.component';
+import { authGuard } from './guards/auth.guard';
 
 export const routes: Routes = [
     { path: '', pathMatch: 'full', redirectTo: 'home'}, 
     { path: 'home', component: HomeComponent }, 
-    { path: 'movies', component: MoviesListComponent }, 
+    { path: 'movies', loadComponent: () => import('./components/movies-list/movies-list.component') }, 
     { path: 'movies/:index', component: MovieDetailsComponent},
-    { path: 'account', component: AccountComponent }
+    { path: 'movies/:index/edit', component: MovieEditComponent, canActivate: [authGuard]},
+    { path: 'account', loadComponent: () => import('./components/account/account.component') }
 
 ];

@@ -40,4 +40,10 @@ export class MovieDetailsComponent implements OnInit {
     const index = Number(this.route.snapshot.params['index']);
     this.router.navigate(['movies', index - 1]);
   }
+
+  goEdit() {
+    const index = Number(this.route.snapshot.params['index']);
+    this.router.navigate(['movies', index, 'edit']);
+  }
+
 }

@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { AuthService } from './services/auth.service';
+import { map } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -10,5 +12,7 @@ import { RouterModule } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'movies-app';
+  userLabel$ = inject(AuthService)
+                  .getStatus()
+                  .pipe(map(status => status ? 'Admin' : 'Guest'))
 }

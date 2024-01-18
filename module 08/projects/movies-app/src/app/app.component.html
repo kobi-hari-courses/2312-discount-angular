@@ -2,6 +2,7 @@
   <a routerLink="home" routerLinkActive="active">Home</a>
   <a routerLink="movies"  routerLinkActive="active">Movies</a>
   <a routerLink="account"  routerLinkActive="active">Account</a>
+  <span class="auth">{{userLabel$ | async}}</span>
 </nav>
 
 <router-outlet></router-outlet>

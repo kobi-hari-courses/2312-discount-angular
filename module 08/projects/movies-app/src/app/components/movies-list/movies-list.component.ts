@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
   templateUrl: './movies-list.component.html',
   styleUrl: './movies-list.component.css'
 })
-export class MoviesListComponent {
+export default class MoviesListComponent {
   dataService = inject(DataService);
   router = inject(Router);
   movieNames$ = this.dataService.getAllTitles();

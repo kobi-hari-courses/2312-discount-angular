@@ -1,1 +1,6 @@
-<p>movie-edit works!</p>
+@if(movie$ | async; as movie) {
+    <input type="text" [value]="movie.caption">
+} @else {
+    Loading...
+}
+

@@ -19,3 +19,9 @@ nav a {
 nav a.active {
     background-color: darkgrey;
 }
+
+.auth {
+    align-self: center;
+    margin-inline-start: auto;
+    margin-inline-end: 10px;
+}

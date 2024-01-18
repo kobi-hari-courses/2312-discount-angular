@@ -1,0 +1,10 @@
+:host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    padding: 20px;
+    font-size: 3em;
+}
