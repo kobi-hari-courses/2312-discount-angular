@@ -1,0 +1,17 @@
+:host {
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;    
+    background-color: lightgray;
+}
+
+nav a {
+    text-decoration: none;
+    padding: 8px;
+    background-color: lightgray;
+    color: black;
+}
