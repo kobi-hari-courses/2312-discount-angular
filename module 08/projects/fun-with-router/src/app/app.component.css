@@ -1,0 +1,16 @@
+nav {
+    display: flex;
+    flex-direction: row;    
+    background: lightgray;
+}
+
+nav a {
+    text-decoration: none;
+    padding: 6px;
+    background: lightgray;
+    color: black;
+}
+
+nav a.here {
+    background-color: darkgray;
+}
