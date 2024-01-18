@@ -15,3 +15,7 @@ nav a {
     background-color: lightgray;
     color: black;
 }
+
+nav a.active {
+    background-color: darkgrey;
+}

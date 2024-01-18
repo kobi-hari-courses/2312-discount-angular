@@ -1,0 +1,10 @@
+.movie {
+    padding: 4px;
+    border: 1px solid gray;
+    margin: 4px;
+    cursor: pointer;
+}
+
+.movie:hover {
+    background-color: rgba(128, 128, 128, 0.345);
+}

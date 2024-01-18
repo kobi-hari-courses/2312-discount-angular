@@ -1,0 +1,30 @@
+:host {
+    display: grid;
+    grid-template-columns: 200px 300px;
+    grid-template-rows: auto auto 200px 1fr;
+}
+
+.toolbar {
+    grid-row: 1;
+    grid-column: 1 / -1;
+}
+
+h1 {
+    grid-row: 2;
+    grid-column: 1 / -1;
+}
+
+img {
+    grid-row: 3;
+    grid-column: 1;
+
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
+
+p {
+    grid-row: 3;
+    grid-column: 2;
+}
+
